@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dnn.PersonaBar.Licensing</name>
+    </assembly>
+    <members>
+        <member name="M:Dnn.PersonaBar.Licensing.Services.LicensingController.GetProduct">
+            GET: api/Licensing/GetProduct
+            <summary>
+            Gets product info
+            </summary>
+            <param></param>
+            <returns>product info</returns>
+        </member>
+    </members>
+</doc>

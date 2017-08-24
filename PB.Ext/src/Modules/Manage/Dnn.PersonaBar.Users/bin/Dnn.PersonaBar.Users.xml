@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dnn.PersonaBar.Users</name>
+    </assembly>
+    <members>
+        <member name="P:Dnn.PersonaBar.Users.Components.Contracts.RegisterationDetails.IgnoreRegistrationMode">
+            <summary>
+            When set to true, whatever registration mode is set, it will always add user
+            Please check below issue for this property
+            https://dnntracker.atlassian.net/browse/SOCIAL-3158
+            </summary>
+        </member>
+        <member name="M:Dnn.PersonaBar.Users.Data.IUsersDataService.GetUsersByUserIds(System.Int32,System.String)">
+            <summary>
+            Get Users basic info by UserId
+            </summary>
+            <param name="portalId">PortalId</param>
+            <param name="userIds">Comma separated user Id</param>
+            <returns>List of UserBasic</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Users.Services.UsersController.CreateUser(Dnn.PersonaBar.Users.Components.Contracts.CreateUserContract)">
+            <summary>
+            Create a User.
+            </summary>
+        </member>
+        <member name="M:Dnn.PersonaBar.Users.Services.UsersController.GetUsers(System.String,Dnn.PersonaBar.Users.Components.Dto.UserFilters,System.Int32,System.Int32,System.String,System.Boolean)">
+            <summary>
+            Perform a search on Users registered in the Site.
+            </summary>
+            <param name="searchText">Search filter text (if any)</param>
+            <param name="filter">User filter. Send -1 to disable.</param>
+            <param name="pageIndex">Page index to begin from (0, 1, 2)</param>
+            <param name="pageSize">Number of records to return per page</param>
+            <param name="sortColumn">Column to sort on</param>
+            <param name="sortAscending">Sort ascending or descending</param>
+        </member>
+        <member name="M:Dnn.PersonaBar.Users.Services.UsersController.GetUserDetail(System.Int32)">
+            <summary>
+            Get User Detail Info.
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

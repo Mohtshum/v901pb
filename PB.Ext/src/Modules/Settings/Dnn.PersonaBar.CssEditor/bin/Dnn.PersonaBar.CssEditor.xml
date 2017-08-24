@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dnn.PersonaBar.CssEditor</name>
+    </assembly>
+    <members>
+        <member name="M:Dnn.PersonaBar.CssEditor.Services.CssEditorController.GetStyleSheet(System.Int32)">
+            GET: api/CssEditor/GetStyleSheet
+            <summary>
+            Gets portal.css of specific portal
+            </summary>
+            <param name="portalId">Id of portal</param>
+            <returns>Content of portal.css</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.CssEditor.Services.CssEditorController.UpdateStyleSheet(Dnn.PersonaBar.CssEditor.Services.Dto.UpdateCssRequest)">
+            POST: api/CssEditor/UpdateStyleSheet
+            <summary>
+            Updates portal.css of specific portal
+            </summary>
+            <param name="request">Content of portal css</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.CssEditor.Services.CssEditorController.RestoreStyleSheet(Dnn.PersonaBar.CssEditor.Services.Dto.RestoreCssRequest)">
+            POST: api/CssEditor/RestoreStyleSheet
+            <summary>
+            Restores portal.css of specific portal
+            </summary>
+            <param name="request">Id of portal</param>
+            <returns>Content of portal.css</returns>
+        </member>
+    </members>
+</doc>

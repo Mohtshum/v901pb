@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dnn.PersonaBar.Extensions</name>
+    </assembly>
+    <members>
+        <member name="M:Dnn.PersonaBar.Extensions.Components.CreateModuleController.CreateModule(Dnn.PersonaBar.Extensions.Components.Dto.CreateModuleDto,System.String@,System.String@)">
+            <summary>
+            create new module.
+            </summary>
+            <param name="createModuleDto"></param>
+            <param name="newPageUrl"></param>
+            <param name="errorMessage"></param>
+            <returns>return the new package id.</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Extensions.Services.ExtensionsController.GetPackageTypes">
+            GET: api/Extensions/GetPackageTypes
+            <summary>
+            Get installed package types.
+            </summary>
+            <returns>List of package types</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Extensions.Services.ExtensionsController.GetAllPackagesListExceptLangPacks">
+            GET: api/Extensions/GetAllPackagesListExceptLangPacks
+            <summary>
+            Get installed packages list except language packs.
+            </summary>
+            <returns>List of [Id,Name] pairs of all system packages</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Extensions.Services.ExtensionsController.GetInstalledPackages(System.String)">
+            GET: api/Extensions/GetInstalledPackages
+            <summary>
+            Gets installed packages
+            </summary>
+            <param name="packageType"></param>
+            <returns>List of installed packages</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Extensions.Services.ExtensionsController.GetAvailablePackages(System.String)">
+            GET: api/Extensions/GetAvailablePackages
+            <summary>
+            Gets available packages
+            </summary>
+            <param name="packageType"></param>
+            <returns>List of available packages</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Extensions.Services.ExtensionsController.InstallAvailablePackage(Dnn.PersonaBar.Extensions.Components.Dto.DownloadPackageDto)">
+            <summary>
+            Inatall a package that is already included under one of the installation folders.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Extensions.Services.ExtensionsController.DownloadPackage(System.String,System.String)">
+            <summary>
+            Download install package.
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

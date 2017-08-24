@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dnn.PersonaBar.Themes</name>
+    </assembly>
+    <members>
+        <member name="M:Dnn.PersonaBar.Themes.Components.IThemesController.GetLayouts(DotNetNuke.Entities.Portals.PortalSettings,Dnn.PersonaBar.Themes.Components.ThemeLevel)">
+            <summary>
+            Get Skins.
+            </summary>
+            <param name="portalSettings"></param>
+            <param name="level">portal level or host level.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Themes.Components.IThemesController.GetContainers(DotNetNuke.Entities.Portals.PortalSettings,Dnn.PersonaBar.Themes.Components.ThemeLevel)">
+            <summary>
+            Get Containers.
+            </summary>
+            <param name="portalSettings"></param>
+            <param name="level">portal level or host level.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Themes.Components.IThemesController.GetThemeFiles(DotNetNuke.Entities.Portals.PortalSettings,Dnn.PersonaBar.Themes.Components.DTO.ThemeInfo)">
+            <summary>
+            get skin files in the skin.
+            </summary>
+            <param name="portalSettings"></param>
+            <param name="theme"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Themes.Components.IThemesController.ApplyTheme(System.Int32,Dnn.PersonaBar.Themes.Components.DTO.ThemeFileInfo,Dnn.PersonaBar.Themes.Components.ApplyThemeScope)">
+            <summary>
+            update portal skin.
+            </summary>
+            <param name="portalId">portal id.</param>
+            <param name="themeFile">skin info.</param>
+            <param name="scope">change skin or container.</param>
+        </member>
+        <member name="M:Dnn.PersonaBar.Themes.Components.IThemesController.DeleteTheme(DotNetNuke.Entities.Portals.PortalSettings,Dnn.PersonaBar.Themes.Components.DTO.ThemeFileInfo)">
+            <summary>
+            delete a skin or container.
+            </summary>
+            <param name="portalSettings"></param>
+            <param name="themeFile"></param>
+        </member>
+        <member name="M:Dnn.PersonaBar.Themes.Components.IThemesController.DeleteThemePackage(DotNetNuke.Entities.Portals.PortalSettings,Dnn.PersonaBar.Themes.Components.DTO.ThemeInfo)">
+            <summary>
+            
+            </summary>
+            <param name="portalSettings"></param>
+            <param name="theme"></param>
+        </member>
+        <member name="M:Dnn.PersonaBar.Themes.Components.IThemesController.UpdateTheme(DotNetNuke.Entities.Portals.PortalSettings,Dnn.PersonaBar.Themes.Components.DTO.UpdateThemeInfo)">
+            <summary>
+            Update Theme Attributes.
+            </summary>
+            <param name="portalSettings"></param>
+            <param name="updateTheme"></param>
+        </member>
+        <member name="M:Dnn.PersonaBar.Themes.Components.IThemesController.ParseTheme(DotNetNuke.Entities.Portals.PortalSettings,Dnn.PersonaBar.Themes.Components.DTO.ThemeInfo,Dnn.PersonaBar.Themes.Components.ParseType)">
+            <summary>
+            Parse skin package.
+            </summary>
+            <param name="portalSettings"></param>
+            <param name="theme"></param>
+            <param name="parseType"></param>
+        </member>
+        <member name="M:Dnn.PersonaBar.Themes.Components.IThemesController.GetThemeFile(DotNetNuke.Entities.Portals.PortalSettings,System.String,Dnn.PersonaBar.Themes.Components.ThemeType)">
+            <summary>
+            
+            </summary>
+            <param name="portalSettings"></param>
+            <param name="filePath"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Themes.Components.IThemesController.ApplyDefaultTheme(DotNetNuke.Entities.Portals.PortalSettings,System.String)">
+            <summary>
+            update portal skin.
+            </summary>
+            <param name="portalSettings">portal settings.</param>
+            <param name="themeName"></param>
+        </member>
+        <member name="F:Dnn.PersonaBar.Themes.Components.ThemeLevel.Site">
+            <summary>
+            Themes only available in current site.
+            </summary>
+        </member>
+        <member name="F:Dnn.PersonaBar.Themes.Components.ThemeLevel.Global">
+            <summary>
+            Themes available in all sites.
+            </summary>
+        </member>
+        <member name="M:Dnn.PersonaBar.Themes.Components.ThemesController.GetLayouts(DotNetNuke.Entities.Portals.PortalSettings,Dnn.PersonaBar.Themes.Components.ThemeLevel)">
+            <summary>
+            Get Skins.
+            </summary>
+            <param name="portalSettings"></param>
+            <param name="level">portal level or host level.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Themes.Components.ThemesController.GetContainers(DotNetNuke.Entities.Portals.PortalSettings,Dnn.PersonaBar.Themes.Components.ThemeLevel)">
+            <summary>
+            Get Containers.
+            </summary>
+            <param name="portalSettings"></param>
+            <param name="level">portal level or host level.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Themes.Components.ThemesController.GetThemeFiles(DotNetNuke.Entities.Portals.PortalSettings,Dnn.PersonaBar.Themes.Components.DTO.ThemeInfo)">
+            <summary>
+            get skin files in the skin.
+            </summary>
+            <param name="portalSettings"></param>
+            <param name="theme"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Themes.Components.ThemesController.ApplyTheme(System.Int32,Dnn.PersonaBar.Themes.Components.DTO.ThemeFileInfo,Dnn.PersonaBar.Themes.Components.ApplyThemeScope)">
+            <summary>
+            update portal skin.
+            </summary>
+            <param name="portalId">portal id.</param>
+            <param name="themeFile">skin info.</param>
+            <param name="scope">change skin or container.</param>
+        </member>
+        <member name="M:Dnn.PersonaBar.Themes.Components.ThemesController.ApplyDefaultTheme(DotNetNuke.Entities.Portals.PortalSettings,System.String)">
+            <summary>
+            update portal skin.
+            </summary>
+            <param name="portalSettings">portal settings.</param>
+            <param name="themeName"></param>
+        </member>
+        <member name="M:Dnn.PersonaBar.Themes.Components.ThemesController.DeleteTheme(DotNetNuke.Entities.Portals.PortalSettings,Dnn.PersonaBar.Themes.Components.DTO.ThemeFileInfo)">
+            <summary>
+            delete a skin or container.
+            </summary>
+            <param name="portalSettings"></param>
+            <param name="themeFile"></param>
+        </member>
+        <member name="M:Dnn.PersonaBar.Themes.Components.ThemesController.DeleteThemePackage(DotNetNuke.Entities.Portals.PortalSettings,Dnn.PersonaBar.Themes.Components.DTO.ThemeInfo)">
+            <summary>
+            
+            </summary>
+            <param name="portalSettings"></param>
+            <param name="theme"></param>
+        </member>
+        <member name="M:Dnn.PersonaBar.Themes.Components.ThemesController.UpdateTheme(DotNetNuke.Entities.Portals.PortalSettings,Dnn.PersonaBar.Themes.Components.DTO.UpdateThemeInfo)">
+            <summary>
+            Update Theme Attributes.
+            </summary>
+            <param name="portalSettings"></param>
+            <param name="updateTheme"></param>
+        </member>
+        <member name="M:Dnn.PersonaBar.Themes.Components.ThemesController.ParseTheme(DotNetNuke.Entities.Portals.PortalSettings,Dnn.PersonaBar.Themes.Components.DTO.ThemeInfo,Dnn.PersonaBar.Themes.Components.ParseType)">
+            <summary>
+            Parse skin package.
+            </summary>
+            <param name="portalSettings"></param>
+            <param name="theme"></param>
+            <param name="parseType"></param>
+        </member>
+    </members>
+</doc>

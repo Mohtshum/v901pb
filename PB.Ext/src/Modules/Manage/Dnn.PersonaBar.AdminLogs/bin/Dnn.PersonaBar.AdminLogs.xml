@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dnn.PersonaBar.AdminLogs</name>
+    </assembly>
+    <members>
+        <member name="M:Dnn.PersonaBar.AdminLogs.Services.AdminLogsController.GetLogTypes">
+            GET: api/AdminLogs/GetLogTypes
+            <summary>
+            Gets log types
+            </summary>
+            <param></param>
+            <returns>List of log types</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.AdminLogs.Services.AdminLogsController.GetLogItems(System.String,System.Int32,System.Int32,System.Int32)">
+            GET: api/AdminLogs/GetLogItems
+            <summary>
+            Gets log items
+            </summary>
+            <param></param>
+            <param name="logType"></param>
+            <param name="pageSize"></param>
+            <param name="pageIndex"></param>
+            <param name="portalId"></param>
+            <returns>List of log items</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.AdminLogs.Services.AdminLogsController.DeleteLogItems(System.Collections.Generic.IEnumerable{System.String})">
+            POST: api/AdminLogs/DeleteLogItems
+            <summary>
+            Deletes log items
+            </summary>
+            <param name="logIds">List of log items to be deleted</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.AdminLogs.Services.AdminLogsController.EmailLogItems(Dnn.PersonaBar.AdminLogs.Services.Dto.EmailLogItemsRequest)">
+            POST: api/AdminLogs/EmailLogItems
+            <summary>
+            Sends log items via email
+            </summary>
+            <param name="request">send email request</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.AdminLogs.Services.AdminLogsController.ClearLog">
+            POST: api/AdminLogs/ClearLog
+            <summary>
+            Clears all log items
+            </summary>
+            <param></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.AdminLogs.Services.AdminLogsController.GetKeepMostRecentOptions">
+            GET: api/AdminLogs/GetKeepMostRecentOptions
+            <summary>
+            Gets options of Keep Most Recent
+            </summary>
+            <param></param>
+            <returns>Option list of Keep Most Recent</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.AdminLogs.Services.AdminLogsController.GetOccurrenceOptions">
+            GET: api/AdminLogs/GetOccurenceThresholdOptions
+            <summary>
+            Gets options of Occurence Threshold
+            </summary>
+            <param></param>
+            <returns>Option list of Occurence Threshold</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.AdminLogs.Services.AdminLogsController.GetLogSettings">
+            GET: api/AdminLogs/GetLogSettings
+            <summary>
+            Gets log settings
+            </summary>
+            <param></param>
+            <returns>List of log settings</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.AdminLogs.Services.AdminLogsController.GetLogSetting(System.String)">
+            GET: api/AdminLogs/GetLogSettings
+            <summary>
+            Gets log type settings
+            </summary>
+            <param name="logTypeConfigId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.AdminLogs.Services.AdminLogsController.AddLogSetting(Dnn.PersonaBar.AdminLogs.Services.Dto.UpdateLogSettingsRequest)">
+            POST: api/AdminLogs/AddLogSettings
+            <summary>
+            Adds a new log settings
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.AdminLogs.Services.AdminLogsController.UpdateLogSetting(Dnn.PersonaBar.AdminLogs.Services.Dto.UpdateLogSettingsRequest)">
+            POST: api/AdminLogs/UpdateLogSettings
+            <summary>
+            Updates an existing log settings
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.AdminLogs.Services.AdminLogsController.DeleteLogSetting(Dnn.PersonaBar.AdminLogs.Services.Dto.DeleteLogSettingsRequest)">
+            POST: api/AdminLogs/DeleteLogSettings
+            <summary>
+            Deletes an existing log settings
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.AdminLogs.Services.AdminLogsController.GetLatestLogSetting">
+            GET: api/AdminLogs/GetLatestLogSetting
+            <summary>
+            Gets latest log setting
+            </summary>
+            <param></param>
+            <returns>Log Setting</returns>
+        </member>
+    </members>
+</doc>

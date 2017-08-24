@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dnn.PersonaBar.ConfigConsole</name>
+    </assembly>
+    <members>
+        <member name="M:Dnn.PersonaBar.ConfigConsole.Services.ConfigConsoleController.GetConfigFilesList">
+            GET: api/ConfigConsole/GetConfigFilesList
+            <summary>
+            Gets list of config files
+            </summary>
+            <param></param>
+            <returns>List of config files</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.ConfigConsole.Services.ConfigConsoleController.GetConfigFile(System.String)">
+            GET: api/ConfigConsole/GetConfigFile
+            <summary>
+            Gets content of a specific config file
+            </summary>
+            <param name="fileName">Name of a config file</param>
+            <returns>Content of a config file</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.ConfigConsole.Services.ConfigConsoleController.UpdateConfigFile(Dnn.PersonaBar.ConfigConsole.Services.Dto.ConfigFileDto)">
+            POST: api/ConfigConsole/UpdateConfigFile
+            <summary>
+            Updates a config file
+            </summary>
+            <param name="configFileDto">Content of config file</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.ConfigConsole.Services.ConfigConsoleController.MergeConfigFile(Dnn.PersonaBar.ConfigConsole.Services.Dto.ConfigFileDto)">
+            POST: api/ConfigConsole/MergeConfigFile
+            <summary>
+            Merges config files
+            </summary>
+            <param name="configFileDto">Content of config file</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

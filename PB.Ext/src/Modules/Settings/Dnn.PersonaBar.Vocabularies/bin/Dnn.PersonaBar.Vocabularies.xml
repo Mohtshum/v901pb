@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dnn.PersonaBar.Vocabularies</name>
+    </assembly>
+    <members>
+        <member name="M:Dnn.PersonaBar.Vocabularies.Services.VocabulariesController.GetVocabularies(System.Int32,System.Int32,System.Int32)">
+            GET: api/Vocabularies/GetVocabularies
+            <summary>
+            Gets an overall list of vocabularies
+            </summary>
+            <param></param>
+            <returns>List of vocabularies</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Vocabularies.Services.VocabulariesController.CreateVocabulary(Dnn.PersonaBar.Vocabularies.Services.Dto.VocabularyDto)">
+            POST: api/Vocabularies/CreateVocabulary
+            <summary>
+            Creates a new vocabulary
+            </summary>
+            <param name="vocabularyDto">Data of a new vocabulary</param>
+            <returns>Id of the new added vocabulary</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Vocabularies.Services.VocabulariesController.UpdateVocabulary(Dnn.PersonaBar.Vocabularies.Services.Dto.VocabularyDto)">
+            POST: api/Vocabularies/UpdateVocabulary
+            <summary>
+            Updates an existing vocabulary
+            </summary>
+            <param name="vocabularyDto">Data of an existing vocabulary</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Vocabularies.Services.VocabulariesController.DeleteVocabulary(System.Int32)">
+            POST: api/Vocabularies/DeleteVocabulary
+            <summary>
+            Removes an existing vocabulary
+            </summary>
+            <param name="vocabularyId">Id of an existing vocabulary that will be deleted</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Vocabularies.Services.VocabulariesController.GetTermsByVocabularyId(System.Int32)">
+            GET: api/Vocabularies/GetTermsByVocabularyId
+            <summary>
+            Gets a list of terms belonging to a specific vocabulary
+            </summary>
+            <param name="vocabularyId">Id of an existing vocabulary</param>
+            <returns>List of terms</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Vocabularies.Services.VocabulariesController.GetTerm(System.Int32)">
+            GET: api/Vocabularies/GetTerm
+            <summary>
+            Gets a term
+            </summary>
+            <param name="termId">Id of an existing term</param>
+            <returns>Data of a term</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Vocabularies.Services.VocabulariesController.CreateTerm(Dnn.PersonaBar.Vocabularies.Services.Dto.TermDto)">
+            POST: api/Vocabularies/CreateTerm
+            <summary>
+            Creates a new term
+            </summary>
+            <param name="termDto">Data of a new term</param>
+            <returns>Id of the new created term</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Vocabularies.Services.VocabulariesController.UpdateTerm(Dnn.PersonaBar.Vocabularies.Services.Dto.TermDto)">
+            POST: api/Vocabularies/UpdateTerm
+            <summary>
+            Updates an existing term
+            </summary>
+            <param name="termDto">Data of an existing term</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Vocabularies.Services.VocabulariesController.DeleteTerm(System.Int32)">
+            POST: api/Vocabularies/DeleteTerm
+            <summary>
+            Removes an existing term
+            </summary>
+            <param name="termId">Id of an existing term</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

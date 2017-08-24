@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dnn.PersonaBar.TaskScheduler</name>
+    </assembly>
+    <members>
+        <member name="M:Dnn.PersonaBar.TaskScheduler.Services.TaskSchedulerController.GetServers">
+            GET: api/TaskScheduler/GetServers
+            <summary>
+            Gets list of servers
+            </summary>
+            <param></param>
+            <returns>List of servers</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.TaskScheduler.Services.TaskSchedulerController.GetScheduleItems(System.String)">
+            GET: api/TaskScheduler/GetScheduleItems
+            <summary>
+            Gets list of schedule items
+            </summary>
+            <param name="serverName"></param>
+            <returns>List of schedule items</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.TaskScheduler.Services.TaskSchedulerController.GetSchedulerSettings">
+            GET: api/TaskScheduler/GetSchedulerSettings
+            <summary>
+            Gets scheduler settings
+            </summary>
+            <param></param>
+            <returns>scheduler settings</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.TaskScheduler.Services.TaskSchedulerController.UpdateSchedulerSettings(Dnn.PersonaBar.TaskScheduler.Services.Dto.UpdateSettingsRequest)">
+            POST: api/TaskScheduler/UpdateSchedulerSettings
+            <summary>
+            Updates scheduler settings
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.TaskScheduler.Services.TaskSchedulerController.GetScheduleItemHistory(System.Int32,System.Int32,System.Int32)">
+            GET: api/TaskScheduler/GetScheduleItemHistory
+            <summary>
+            Gets schedule item history
+            </summary>
+            <param name="scheduleId"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns>schedule item history</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.TaskScheduler.Services.TaskSchedulerController.GetScheduleItem(System.Int32)">
+            GET: api/TaskScheduler/GetScheduleItem
+            <summary>
+            Gets an existing schedule item
+            </summary>
+            <param></param>
+            <returns>schedule item</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.TaskScheduler.Services.TaskSchedulerController.CreateScheduleItem(Dnn.PersonaBar.TaskScheduler.Services.Dto.ScheduleDto)">
+            POST: api/TaskScheduler/CreateScheduleItem
+            <summary>
+            Creates a new schedule item
+            </summary>
+            <param name="scheduleDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.TaskScheduler.Services.TaskSchedulerController.UpdateScheduleItem(Dnn.PersonaBar.TaskScheduler.Services.Dto.ScheduleDto)">
+            POST: api/TaskScheduler/UpdateScheduleItem
+            <summary>
+            Updates an existing schedule item
+            </summary>
+            <param name="scheduleDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.TaskScheduler.Services.TaskSchedulerController.GetScheduleStatus">
+            GET: api/TaskScheduler/GetScheduleStatus
+            <summary>
+            Gets schedule status
+            </summary>
+            <param></param>
+            <returns>schedule status</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.TaskScheduler.Services.TaskSchedulerController.StartSchedule">
+            POST: api/TaskScheduler/StartSchedule
+            <summary>
+            Starts schedule
+            </summary>
+            <param></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.TaskScheduler.Services.TaskSchedulerController.StopSchedule">
+            POST: api/TaskScheduler/StopSchedule
+            <summary>
+            Stops schedule
+            </summary>
+            <param></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.TaskScheduler.Services.TaskSchedulerController.RunSchedule(Dnn.PersonaBar.TaskScheduler.Services.Dto.ScheduleDto)">
+            POST: api/TaskScheduler/RunSchedule
+            <summary>
+            Runs schedule
+            </summary>
+            <param name="scheduleDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.TaskScheduler.Services.TaskSchedulerController.DeleteSchedule(Dnn.PersonaBar.TaskScheduler.Services.Dto.ScheduleDto)">
+            POST: api/TaskScheduler/DeleteSchedule
+            <summary>
+            Runs schedule
+            </summary>
+            <param name="scheduleDto"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

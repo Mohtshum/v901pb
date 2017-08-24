@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dnn.PersonaBar.Pages</name>
+    </assembly>
+    <members>
+        <member name="M:Dnn.PersonaBar.Pages.Components.IPageManagementController.TabHasChildren(DotNetNuke.Entities.Tabs.TabInfo)">
+            <summary>
+            Returns true if tab has children, false otherwise
+            </summary>
+            <param name="tabInfo">Tab info object</param>
+            <returns>Returns true if tab has children, false otherwise</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Pages.Components.IPagesController.CleanTabUrl(System.String)">
+            <summary>
+            Returns a clean tab relative url based on Advanced Management Url settings
+            </summary>
+            <param name="url">Url not cleaned, this could containes blank space or invalid characters</param>
+            <returns>Cleaned Url</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Pages.Components.IPagesController.CopyThemeToDescendantPages(System.Int32,Dnn.PersonaBar.Pages.Services.Dto.Theme)">
+            <summary>
+            Copy the given theme to all descendant pages
+            </summary>
+            <param name="pageId">page identifier</param>
+            <param name="theme">Theme</param>
+        </member>
+        <member name="M:Dnn.PersonaBar.Pages.Components.IPagesController.CopyPermissionsToDescendantPages(System.Int32)">
+            <summary>
+            Copy the current page permissions to all descendant pages
+            </summary>
+            <param name="pageId">page identifier</param>
+        </member>
+        <member name="T:Dnn.PersonaBar.Pages.Components.IDefaultPortalThemeController">
+            <summary>
+            Theme controller
+            </summary>
+        </member>
+        <member name="M:Dnn.PersonaBar.Pages.Components.IDefaultPortalThemeController.GetDefaultPortalContainer">
+            <summary>
+            Returns the default current portal container
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Pages.Components.IDefaultPortalThemeController.GetDefaultPortalLayout">
+            <summary>
+            Returns the default current portal layout
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Pages.Components.PagesControllerImpl.GetTabDescription(Dnn.PersonaBar.Pages.Services.Dto.PageSettings)">
+            <summary>
+            If the tab description is equal to the portal description
+            we store null so the system will serve the portal description instead
+            </summary>
+            <param name="pageSettings"></param>
+            <returns>Tab Description value to be stored</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Pages.Components.PagesControllerImpl.GetKeyWords(Dnn.PersonaBar.Pages.Services.Dto.PageSettings)">
+            <summary>
+            If the tab keywords is equal to the portal keywords
+            we store null so the system will serve the portal keywords instead
+            </summary>
+            <param name="pageSettings"></param>
+            <returns>Tab Keywords value to be stored</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Pages.Services.PagesController.GetPageDetails(System.Int32)">
+            GET: api/Pages/GetPageDetails
+            <summary>
+            Get detail of a page
+            </summary>
+            <param name="pageId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Pages.Services.PagesController.GetPageList(System.Int32,System.String)">
+            GET: api/Pages/GetPageList
+            <summary>
+            
+            </summary>
+            <param name="parentId"></param>
+            <param name="searchKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Pages.Services.PagesController.GetTabLocalization(System.Int32)">
+            <summary>
+            Gets the view data that used to be in the old ControlBar's localization tab
+            under Page Settings ( /{page}/ctl/Tab/action/edit/activeTab/settingTab ).
+            </summary>
+            <param name="tabId">The ID of the tab to get localization for.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Pages.Services.PagesController.GetContentLocalizationEnabled">
+            <summary>
+            Gets ContentLocalizationEnabled 
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dnn.PersonaBar.Security</name>
+    </assembly>
+    <members>
+        <member name="M:Dnn.PersonaBar.Security.Components.Utility.CleanUpInstallerFiles">
+            <summary>
+                delete unnedded installwizard files
+            </summary>
+        </member>
+        <member name="M:Dnn.PersonaBar.Security.Components.Utility.SearchFiles(System.String)">
+            <summary>
+                search all files in the website for matching text
+            </summary>
+            <param name="searchText">the matching text</param>
+            <returns>ienumerable of file names</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Security.Components.Utility.FindUnexpectedExtensions">
+            <summary>
+                search all website files for files with a potential dangerous extension
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Security.Components.Utility.FineHiddenSystemFiles">
+            <summary>
+                search all website files which are hidden or system.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Security.Services.SecurityController.GetBasicLoginSettings(System.String)">
+            GET: api/Security/GetBasicLoginSettings
+            <summary>
+            Gets portal's basic login settings
+            </summary>
+            <param name="cultureCode"></param>
+            <returns>Portal's basic login settings</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Security.Services.SecurityController.UpdateBasicLoginSettings(Dnn.PersonaBar.Security.Services.Dto.UpdateBasicLoginSettingsRequest)">
+            POST: api/Security/UpdateBasicLoginSettings
+            <summary>
+            Updates an existing log settings
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Security.Services.SecurityController.GetIpFilters">
+            GET: api/Security/GetIpFilters
+            <summary>
+            Gets list of IP filters
+            </summary>
+            <param></param>
+            <returns>List of IP filters</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Security.Services.SecurityController.GetIpFilter(System.Int32)">
+            GET: api/Security/GetIpFilter
+            <summary>
+            Gets an IP filter
+            </summary>
+            <param name="filterId"></param>
+            <returns>IP filter</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Security.Services.SecurityController.UpdateIpFilter(Dnn.PersonaBar.Security.Services.Dto.UpdateIpFilterRequest)">
+            POST: api/Security/UpdateIpFilter
+            <summary>
+            Updates an IP filter
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Security.Services.SecurityController.DeleteIpFilter(System.Int32)">
+            POST: api/Security/DeleteIpFilter
+            <summary>
+            Deletes an IP filter
+            </summary>
+            <param name="filterId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Security.Services.SecurityController.GetMemberSettings">
+            GET: api/Security/GetMemberSettings
+            <summary>
+            Gets portal's member settings
+            </summary>
+            <returns>Portal's member settings</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Security.Services.SecurityController.UpdateMemberSettings(Dnn.PersonaBar.Security.Services.Dto.UpdateMemberSettingsRequest)">
+            POST: api/Security/UpdateMemberSettings
+            <summary>
+            Updates member settings
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Security.Services.SecurityController.GetRegistrationSettings">
+            GET: api/Security/GetRegistrationSettings
+            <summary>
+            Gets portal's registration settings
+            </summary>
+            <returns>Portal's registration settings</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Security.Services.SecurityController.UpdateRegistrationSettings(Dnn.PersonaBar.Security.Services.Dto.UpdateRegistrationSettingsRequest)">
+            POST: api/Security/UpdateRegistrationSettings
+            <summary>
+            Updates registration settings
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Security.Services.SecurityController.GetSslSettings">
+            GET: api/Security/GetSslSettings
+            <summary>
+            Gets portal's SSL settings
+            </summary>
+            <returns>Portal's ssl settings</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Security.Services.SecurityController.UpdateSslSettings(Dnn.PersonaBar.Security.Services.Dto.UpdateSslSettingsRequest)">
+            POST: api/Security/UpdateSslSettings
+            <summary>
+            Updates SSL settings
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Security.Services.SecurityController.GetSecurityBulletins">
+            GET: api/Security/GetSecurityBulletins
+            <summary>
+            Gets security bulletins
+            </summary>
+            <returns>Security bulletins</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Security.Services.SecurityController.GetOtherSettings">
+            GET: api/Security/GetOtherSettings
+            <summary>
+            Gets host other settings
+            </summary>
+            <returns>Portal's ssl settings</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Security.Services.SecurityController.UpdateOtherSettings(Dnn.PersonaBar.Security.Services.Dto.UpdateOtherSettingsRequest)">
+            POST: api/Security/UpdateOtherSettings
+            <summary>
+            Updates other settings
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Security.Services.SecurityController.GetAuditCheckResults">
+            GET: api/Security/GetAuditCheckResults
+            <summary>
+            Gets audit check results
+            </summary>
+            <returns>audit check results</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Security.Services.SecurityController.GetSuperuserActivities">
+            GET: api/Security/GetAuditCheckResults
+            <summary>
+            Gets audit check results
+            </summary>
+            <returns>audit check results</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Security.Services.SecurityController.SearchFileSystemAndDatabase(System.String)">
+            GET: api/Security/SearchFileSystemAndDatabase
+            <summary>
+            Searchs file system and database
+            </summary>
+            <returns>Searchs file system and database</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Security.Services.SecurityController.GetLastModifiedFiles">
+            GET: api/Security/GetLastModifiedFiles
+            <summary>
+            Gets recently modified files
+            </summary>
+            <returns>last modified files</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Security.Services.SecurityController.GetLastModifiedSettings">
+            GET: api/Security/GetRecentlyModifiedSettings
+            <summary>
+            Gets last modified settings
+            </summary>
+            <returns>last modified settings</returns>
+        </member>
+    </members>
+</doc>

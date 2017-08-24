@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dnn.PersonaBar.Sites</name>
+    </assembly>
+    <members>
+        <member name="M:Dnn.PersonaBar.Sites.Services.SitesController.GetPortals(System.Int32,System.String,System.Int32,System.Int32)">
+            <summary>
+            Gets list of portals
+            </summary>
+            <param name="portalGroupId"></param>
+            <param name="filter"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns>List of portals</returns>
+            <example>
+            GET /api/personabar/sites/GetPortals?portalGroupId=-1&amp;filter=mysite&amp;pageIndex=0&amp;pageSize=10
+            </example>
+        </member>
+        <member name="M:Dnn.PersonaBar.Sites.Services.SitesController.CreatePortal(Dnn.PersonaBar.Sites.Services.Dto.CreatePortalRequest)">
+            POST: api/Sites/CreatePortal
+            <summary>
+            Adds a portal
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Sites.Services.SitesController.DeletePortal(System.Int32)">
+            POST: api/Sites/DeletePortal
+            <summary>
+            Deletes a portal
+            </summary>
+            <param name="portalId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Sites.Services.SitesController.ExportPortalTemplate(Dnn.PersonaBar.Sites.Services.Dto.ExportTemplateRequest)">
+            POST: api/Sites/ExportPortalTemplate
+            <summary>
+            Exports portal template
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Sites.Services.SitesController.GetPortalLocales(System.Int32)">
+            GET: api/Sites/GetPortalLocales
+            <summary>
+            Gets list of portal locales
+            </summary>
+            <param name="portalId"></param>
+            <returns>List of portal locales</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Sites.Services.SitesController.DeleteExpiredPortals">
+            POST: api/Sites/DeleteExpiredPortals
+            <summary>
+            Deletes expired portals
+            </summary>
+            <param></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Sites.Services.SitesController.GetPortalTemplates">
+            GET: api/Sites/GetPortalTemplates
+            <summary>
+            Gets list of portal templates
+            </summary>
+            <param></param>
+            <returns>List of portal templates</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.Sites.Services.SitesController.RequiresQuestionAndAnswer">
+            GET: api/Sites/RequiresQuestionAndAnswer
+            <summary>
+            Gets whether a Question/Answer is required for Password retrieval
+            </summary>
+            <param></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

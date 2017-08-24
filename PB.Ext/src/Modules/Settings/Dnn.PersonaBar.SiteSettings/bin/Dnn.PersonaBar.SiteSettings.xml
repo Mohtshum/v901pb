@@ -1,0 +1,499 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dnn.PersonaBar.SiteSettings</name>
+    </assembly>
+    <members>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.LanguagesController.LoadFile(System.Int32,Dnn.PersonaBar.SiteSettings.Components.Constants.LanguageResourceMode,System.String,System.String)">
+            -----------------------------------------------------------------------------
+            <summary>
+              Loads resources from file
+            </summary>
+            <param name = "portalId">Portal Id</param>
+            <param name = "mode">Active editor mode</param>
+            <param name = "type">Resource being loaded (edit or default)</param>
+            <param name="locale">The locale of the file being edited</param>
+            <returns></returns>
+            <remarks>
+              Depending on the editor mode, resources will be overrided using default DNN schema.
+              "Edit" resources will only load selected file.
+              When loading "Default" resources (to be used on the editor as helpers) fallback resource
+              chain will be used in order for the editor to be able to correctly see what
+              is the current default value for the any key. This process depends on the current active
+              editor mode:
+              - System: when editing system base resources on en-US needs to be loaded
+              - Host: base en-US, and base locale especific resource
+              - Portal: base en-US, host override for en-US, base locale especific resource, and host override
+              for locale
+            </remarks>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.LanguagesController.LoadResource(System.Collections.IDictionary,System.String)">
+            -----------------------------------------------------------------------------
+            <summary>
+             Loads resources from file into the HastTable
+            </summary>
+            <param name = "ht">Current resources HashTable</param>
+            <param name = "filepath">Resources file</param>
+            <returns>Base table updated with new resources </returns>
+            <remarks>
+              Returned hashtable uses resourcekey as key.
+              Value contains a Pair object where:
+              First=>value to be edited
+              Second=>default value
+            </remarks>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.LanguagesController.ResourceFile(System.Int32,System.String,Dnn.PersonaBar.SiteSettings.Components.Constants.LanguageResourceMode)">
+            -----------------------------------------------------------------------------
+            <summary>
+              Returns the resource file name for a given resource and language
+            </summary>
+            <param name="portalId">Portal Id</param>
+            <param name="language">Language Name.</param>
+            <param name = "mode">Identifies the resource being searched (System, Host, Portal)</param>
+            <returns>Localized File Name</returns>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.LanguagesController.SaveResourceFileFile(System.Int32,Dnn.PersonaBar.SiteSettings.Components.Constants.LanguageResourceMode,System.String,System.Collections.Generic.IEnumerable{Dnn.PersonaBar.SiteSettings.Services.Dto.LocalizationEntry})">
+            -----------------------------------------------------------------------------
+            <summary>
+              Updates all values from the datagrid
+            </summary>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.GetPortalSettings(System.Nullable{System.Int32},System.String)">
+            GET: api/SiteSettings/GetPortalSettings
+            <summary>
+            Gets site settings
+            </summary>
+            <param name="portalId"></param>
+            <param name="cultureCode"></param>
+            <returns>site settings</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.UpdatePortalSettings(Dnn.PersonaBar.SiteSettings.Services.Dto.UpdateSiteSettingsRequest)">
+            POST: api/SiteSettings/UpdatePortalSettings
+            <summary>
+            Updates site settings
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.GetDefaultPagesSettings(System.Nullable{System.Int32},System.String)">
+            GET: api/SiteSettings/GetDefaultPagesSettings
+            <summary>
+            Gets default pages settings
+            </summary>
+            <param name="portalId"></param>
+            <param name="cultureCode"></param>
+            <returns>default pages settings</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.UpdateDefaultPagesSettings(Dnn.PersonaBar.SiteSettings.Services.Dto.UpdateDefaultPagesSettingsRequest)">
+            POST: api/SiteSettings/UpdateDefaultPagesSettings
+            <summary>
+            Updates default pages settings
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.GetMessagingSettings(System.Nullable{System.Int32})">
+            GET: api/SiteSettings/GetMessagingSettings
+            <summary>
+            Gets messaging settings
+            </summary>
+            <param name="portalId"></param>
+            <returns>messaging settings</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.UpdateMessagingSettings(Dnn.PersonaBar.SiteSettings.Services.Dto.UpdateMessagingSettingsRequest)">
+            POST: api/SiteSettings/UpdateMessagingSettings
+            <summary>
+            Updates messaging settings
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.GetProfileSettings(System.Nullable{System.Int32})">
+            GET: api/SiteSettings/GetProfileSettings
+            <summary>
+            Gets profile settings
+            </summary>
+            <param name="portalId"></param>
+            <returns>profile settings</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.UpdateProfileSettings(Dnn.PersonaBar.SiteSettings.Services.Dto.UpdateProfileSettingsRequest)">
+            POST: api/SiteSettings/UpdateProfileSettings
+            <summary>
+            Updates profile settings
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.GetProfileProperties(System.Nullable{System.Int32})">
+            GET: api/SiteSettings/GetProfileProperties
+            <summary>
+            Gets profile properties
+            </summary>
+            <param name="portalId"></param>
+            <returns>profile properties</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.GetProfileProperty(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            GET: api/SiteSettings/GetProfileProperty
+            <summary>
+            Gets profile property by id
+            </summary>
+            <param name="propertyId"></param>
+            <param name="portalId"></param>
+            <returns>profile property</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.GetProfilePropertyLocalization(System.Nullable{System.Int32},System.String,System.String,System.String)">
+            GET: api/SiteSettings/GetProfilePropertyLocalization
+            <summary>
+            Gets profile property localization
+            </summary>
+            <param name="portalId"></param>
+            <param name="propertyName"></param>
+            <param name="propertyCategory"></param>
+            <param name="cultureCode"></param>
+            <returns>profile property</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.UpdateProfilePropertyLocalization(Dnn.PersonaBar.SiteSettings.Services.Dto.UpdateProfilePropertyLocalizationRequest)">
+            POST: api/SiteSettings/UpdateProfilePropertyLocalization
+            <summary>
+            Updates profile property localization
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.AddProfileProperty(Dnn.PersonaBar.SiteSettings.Services.Dto.UpdateProfilePropertyRequest)">
+            POST: api/SiteSettings/AddProfileProperty
+            <summary>
+            Creates profile property
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.UpdateProfileProperty(Dnn.PersonaBar.SiteSettings.Services.Dto.UpdateProfilePropertyRequest)">
+            POST: api/SiteSettings/UpdateProfileProperty
+            <summary>
+            Updates profile property
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.UpdateProfilePropertyOrders(Dnn.PersonaBar.SiteSettings.Services.Dto.UpdateProfilePropertyOrdersRequest)">
+            POST: api/SiteSettings/SwapProfilePropertyOrders
+            <summary>
+            Moves profile property
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.DeleteProfileProperty(System.Int32,System.Nullable{System.Int32})">
+            POST: api/SiteSettings/DeleteProfileProperty
+            <summary>
+            Deletes profile property
+            </summary>
+            <param name="propertyId"></param>
+            <param name="portalId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.GetUrlMappingSettings(System.Nullable{System.Int32})">
+            GET: api/SiteSettings/GetUrlMappingSettings
+            <summary>
+            Gets Url mapping settings
+            </summary>
+            <param name="portalId"></param>
+            <returns>Url mapping settings</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.UpdateUrlMappingSettings(Dnn.PersonaBar.SiteSettings.Services.Dto.UpdateUrlMappingSettingsRequest)">
+            POST: api/SiteSettings/UpdateUrlMappingSettings
+            <summary>
+            Updates Url mapping settings
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.GetSiteAliases(System.Nullable{System.Int32})">
+            GET: api/SiteSettings/getSiteAliases
+            <summary>
+            Gets site aliases
+            </summary>
+            <param name="portalId"></param>
+            <returns>site aliases</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.GetSiteAlias(System.Int32)">
+            GET: api/SiteSettings/GetSiteAlias
+            <summary>
+            Gets site alias by id
+            </summary>
+            <param name="portalAliasId"></param>
+            <returns>site alias</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.AddSiteAlias(Dnn.PersonaBar.SiteSettings.Services.Dto.UpdateSiteAliasRequest)">
+            POST: api/SiteSettings/AddSiteAlias
+            <summary>
+            Adds site alias
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.UpdateSiteAlias(Dnn.PersonaBar.SiteSettings.Services.Dto.UpdateSiteAliasRequest)">
+            POST: api/SiteSettings/UpdateSiteAlias
+            <summary>
+            Updates site alias
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.DeleteSiteAlias(System.Int32)">
+            POST: api/SiteSettings/DeleteSiteAlias
+            <summary>
+            Deletes site alias
+            </summary>
+            <param name="portalAliasId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.SetPrimarySiteAlias(System.Int32)">
+            POST: api/SiteSettings/SetPrimarySiteAlias
+            <summary>
+            Sets primary site alias
+            </summary>
+            <param name="portalAliasId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.GetBasicSearchSettings">
+            GET: api/SiteSettings/GetBasicSearchSettings
+            <summary>
+            Gets basic search settings
+            </summary>
+            <returns>basic search settings</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.UpdateBasicSearchSettings(Dnn.PersonaBar.SiteSettings.Services.Dto.UpdateBasicSearchSettingsRequest)">
+            POST: api/SiteSettings/UpdateBasicSearchSettings
+            <summary>
+            Updates basic search settings
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.CompactSearchIndex">
+            POST: api/SiteSettings/CompactSearchIndex
+            <summary>
+            Compacts search index
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.HostSearchReindex">
+            POST: api/SiteSettings/HostSearchReindex
+            <summary>
+            Re-index host search
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.PortalSearchReindex(System.Nullable{System.Int32})">
+            POST: api/SiteSettings/PortalSearchReindex
+            <summary>
+            Re-index portal search
+            </summary>
+            <param name="portalId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.GetPortals">
+            GET: api/SiteSettings/GetPortals
+            <summary>
+            Gets portals
+            </summary>
+            <param></param>
+            <returns>List of portals</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.GetCultureList(System.Nullable{System.Int32})">
+            GET: api/SiteSettings/GetCultureList
+            <summary>
+            Gets culture list
+            </summary>
+            <param name="portalId"></param>
+            <returns>Culture List</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.GetSynonymsGroups(System.Nullable{System.Int32},System.String)">
+            GET: api/SiteSettings/GetSynonymsGroups
+            <summary>
+            Gets Synonyms Groups
+            </summary>
+            <param name="portalId"></param>
+            <param name="cultureCode"></param>
+            <returns>Synonyms Groups</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.AddSynonymsGroup(Dnn.PersonaBar.SiteSettings.Services.Dto.UpdateSynonymsGroupRequest)">
+            POST: api/SiteSettings/AddSynonymsGroup
+            <summary>
+            Adds Synonyms Group
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.UpdateSynonymsGroup(Dnn.PersonaBar.SiteSettings.Services.Dto.UpdateSynonymsGroupRequest)">
+            POST: api/SiteSettings/UpdateSynonymsGroup
+            <summary>
+            Updates Synonyms Group
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.DeleteSynonymsGroup(Dnn.PersonaBar.SiteSettings.Services.Dto.UpdateSynonymsGroupRequest)">
+            POST: api/SiteSettings/DeleteSynonymsGroup
+            <summary>
+            Deletes Synonyms Group
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.GetIgnoreWords(System.Nullable{System.Int32},System.String)">
+            GET: api/SiteSettings/GetIgnoreWords
+            <summary>
+            Gets ignore words
+            </summary>
+            <param name="portalId"></param>
+            <param name="cultureCode"></param>
+            <returns>ignore words</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.AddIgnoreWords(Dnn.PersonaBar.SiteSettings.Services.Dto.UpdateIgnoreWordsRequest)">
+            POST: api/SiteSettings/AddIgnoreWords
+            <summary>
+            Adds ignore words
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.UpdateIgnoreWords(Dnn.PersonaBar.SiteSettings.Services.Dto.UpdateIgnoreWordsRequest)">
+            POST: api/SiteSettings/UpdateIgnoreWords
+            <summary>
+            Updates ignore words
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.DeleteIgnoreWords(Dnn.PersonaBar.SiteSettings.Services.Dto.UpdateIgnoreWordsRequest)">
+            POST: api/SiteSettings/DeleteSynonymsGroup
+            <summary>
+            Deletes Synonyms Group
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.GetLanguageSettings(System.Nullable{System.Int32})">
+            GET: api/SiteSettings/GetLanguageSettings
+            <summary>
+            Gets language settings
+            </summary>
+            <param name="portalId"></param>
+            <returns>language settings</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.UpdateLanguageSettings(Dnn.PersonaBar.SiteSettings.Services.Dto.UpdateLanguageSettingsRequest)">
+            POST: api/SiteSettings/UpdateLanguageSettings
+            <summary>
+            Updates language settings
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.GetLanguages(System.Nullable{System.Int32})">
+            GET: api/SiteSettings/GetLanguages
+            <summary>
+            Gets languages
+            </summary>
+            <param name="portalId"></param>
+            <returns>languages</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.GetLanguage(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            GET: api/SiteSettings/GetLanguage
+            <summary>
+            Gets language
+            </summary>
+            <param name="portalId"></param>
+            <param name="languageId"></param>
+            <returns>language</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.GetAllLanguages">
+            GET: api/SiteSettings/GetAllLanguages
+            <summary>
+            Gets language
+            </summary>
+            <returns>all languages</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.AddLanguage(Dnn.PersonaBar.SiteSettings.Services.Dto.UpdateLanguageRequest)">
+            POST: api/SiteSettings/AddLanguage
+            <summary>
+            Adds language
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.UpdateLanguageRoles(Dnn.PersonaBar.SiteSettings.Services.Dto.UpdateLanguageRequest)">
+            POST: api/SiteSettings/UpdateLanguageRoles
+            <summary>
+            Updates language security
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.UpdateLanguage(Dnn.PersonaBar.SiteSettings.Services.Dto.UpdateLanguageRequest)">
+            POST: api/SiteSettings/UpdateLanguage
+            <summary>
+            Updates language
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.VerifyLanguageResourceFiles">
+            GET: api/SiteSettings/VerifyLanguageResourceFiles
+            <summary>
+            Verifies language resource files
+            </summary>
+            <returns>verification results</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.GetModuleList(System.String)">
+            GET: api/SiteSettings/GetModuleList
+            <summary>
+            Gets module list by type
+            </summary>
+            <returns>list of modules</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.CreateLanguagePack(Dnn.PersonaBar.SiteSettings.Services.Dto.CreateLanguagePackRequest)">
+            POST: api/SiteSettings/CreateLanguagePack
+            <summary>
+            Creates language
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.GetTranslatorRoles(System.Nullable{System.Int32},System.Int32,System.String)">
+            GET: api/SiteSettings/GetTranslatorRoles
+            <summary>
+            Gets roles
+            </summary>
+            <returns>list of translator roles</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.GetTranslatorRoleGroups(System.Nullable{System.Int32})">
+            GET: api/SiteSettings/GetTranslatorRoleGroups
+            <summary>
+            Gets role groups
+            </summary>
+            <returns>list of translator role groups</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.GetOtherSettings">
+            GET: api/SiteSettings/GetOtherSettings
+            <summary>
+            Gets other settings
+            </summary>
+            <returns>other settings</returns>
+        </member>
+        <member name="M:Dnn.PersonaBar.SiteSettings.Services.SiteSettingsController.UpdateOtherSettings(Dnn.PersonaBar.SiteSettings.Services.Dto.UpdateOtherSettingsRequest)">
+            POST: api/SiteSettings/UpdateOtherSettings
+            <summary>
+            Updates other settings
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
