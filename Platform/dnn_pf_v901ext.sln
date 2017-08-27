@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26020.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Support Projects", "Support Projects", "{1DFA65CE-5978-49F9-83BA-CFBD0C7A1814}"
 EndProject
@@ -393,6 +393,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Xcillion", "Xcillion", "{5F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetNuke.Skins.Xcillion", "DNN Platform\Skins\Xcillion\DotNetNuke.Skins.Xcillion.csproj", "{104C9117-430C-4389-B67D-B1EFCF8146CB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Developments", "Developments", "{5621A782-699E-44A2-A1D0-1B9F6C5069B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNN.Scheduling", "DNN.Scheduling\DNN.Scheduling.csproj", "{8CF630A4-EA1C-413E-946D-9AA772D9E146}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -773,6 +777,14 @@ Global
 		{104C9117-430C-4389-B67D-B1EFCF8146CB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{104C9117-430C-4389-B67D-B1EFCF8146CB}.Release|x86.ActiveCfg = Release|Any CPU
 		{104C9117-430C-4389-B67D-B1EFCF8146CB}.Release|x86.Build.0 = Release|Any CPU
+		{8CF630A4-EA1C-413E-946D-9AA772D9E146}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CF630A4-EA1C-413E-946D-9AA772D9E146}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CF630A4-EA1C-413E-946D-9AA772D9E146}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8CF630A4-EA1C-413E-946D-9AA772D9E146}.Debug|x86.Build.0 = Debug|Any CPU
+		{8CF630A4-EA1C-413E-946D-9AA772D9E146}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CF630A4-EA1C-413E-946D-9AA772D9E146}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CF630A4-EA1C-413E-946D-9AA772D9E146}.Release|x86.ActiveCfg = Release|Any CPU
+		{8CF630A4-EA1C-413E-946D-9AA772D9E146}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -865,5 +877,6 @@ Global
 		{C885195F-A9B0-4397-926C-E62CEB9FC5E3} = {29273BE6-1AA8-4970-98A0-41BFFEEDA67B}
 		{5FA7FCDD-A13E-4F1D-91B6-827FD09BBECF} = {C885195F-A9B0-4397-926C-E62CEB9FC5E3}
 		{104C9117-430C-4389-B67D-B1EFCF8146CB} = {5FA7FCDD-A13E-4F1D-91B6-827FD09BBECF}
+		{8CF630A4-EA1C-413E-946D-9AA772D9E146} = {5621A782-699E-44A2-A1D0-1B9F6C5069B5}
 	EndGlobalSection
 EndGlobal
