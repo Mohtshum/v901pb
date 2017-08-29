@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace DNN.Scheduling
 {
+    // *** very important
+    //name to put in dnn admin for new task for this scheduler will be
+    // DNN.Scheduling.DemoWritingScheduling
     public class DemoWritingScheduling : SchedulerClient
     {
         private ScheduleHistoryItem shItem;
