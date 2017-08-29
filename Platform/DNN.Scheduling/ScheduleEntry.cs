@@ -2,9 +2,9 @@
 
 namespace DNN.Scheduling
 {
-    internal class ScheduleLog
+    internal class ScheduleEntry
     {
-        public ScheduleLog()
+        public ScheduleEntry()
         {
         }
 

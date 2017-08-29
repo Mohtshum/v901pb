@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace DNN.Scheduling
 {
-    public class LogWritingScheduling : SchedulerClient
+    public class DemoWritingScheduling : SchedulerClient
     {
         private ScheduleHistoryItem shItem;
 
-        public LogWritingScheduling(ScheduleHistoryItem shItem) : base()
+        public DemoWritingScheduling(ScheduleHistoryItem shItem) : base()
         {
             this.shItem = shItem;
         }

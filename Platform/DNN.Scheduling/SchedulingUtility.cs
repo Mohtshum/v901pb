@@ -3,15 +3,14 @@ using DotNetNuke.Data;
 
 namespace DNN.Scheduling
 {
-    internal class SchedulingUtility
+    public class SchedulingUtility
     {
-        internal static void WriteLog(DateTime currentTime)
+        public static void WriteLog(DateTime currentTime)
         {
             DataProvider dbHandler = DataProvider.Instance();
-            dbHandler.ExecuteReader("DotSee_Scheduling", null);
-
+            dbHandler.ExecuteNonQuery("Add_SchedulingLog", string.Format("some msg at {0}", currentTime), currentTime);
             // dbhandler must do these
-            var logOfSchedule =  new ScheduleLog() { ScheduleID = 1, Msg = "some log msg", OnDate = currentTime };
+            //var logOfSchedule =  new ScheduleLog() { ScheduleID = 1, Msg = "some log msg", OnDate = currentTime };
             // dbHandler.Save(logOfSchedule);
         }
     }
